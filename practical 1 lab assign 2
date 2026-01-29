@@ -1,0 +1,31 @@
+# Program to store Vendor details and generate Annual Purchase Report
+
+# Read Vendor Details
+vendor_name = input("Enter Vendor Name: ")
+year_of_association = int(input("Enter Year of Association: "))
+contact_number = input("Enter Contact Number: ")
+email_id = input("Enter Email ID: ")
+
+# Read Monthly Purchase Details
+monthly_purchases = []
+total_annual_purchase = 0
+
+print("\nEnter Monthly Purchase Amounts:")
+for month in range(1, 13):
+    amount = float(input(f"Month {month} purchase amount: "))
+    monthly_purchases.append(amount)
+    total_annual_purchase += amount
+
+# Generate Annual Report
+print("\n---------- Annual Purchase / Billing Report ----------")
+print("Vendor Name          :", vendor_name)
+print("Year of Association  :", year_of_association)
+print("Contact Number       :", contact_number)
+print("Email ID             :", email_id)
+
+print("\nMonthly Purchase Details:")
+for month in range(12):
+    print(f"Month {month + 1}: Rs. {monthly_purchases[month]}")
+
+print("\nTotal Annual Purchase : Rs.", total_annual_purchase)
+print("------------------------------------------------------")
