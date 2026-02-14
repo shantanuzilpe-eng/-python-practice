@@ -1,0 +1,24 @@
+# Lab Assignment - 2
+
+# Input: prices of sold items
+prices = tuple(map(float, input("Enter prices of sold items separated by space: ").split()))
+
+# a) Total number of items sold
+print("Total number of items sold:", len(prices))
+
+# b) Cheapest item price
+if len(prices) > 0:
+    cheapest = min(prices)
+    print("Price of cheapest item sold:", cheapest)
+
+    # c) Costliest item price
+    costliest = max(prices)
+    print("Price of costliest item sold:", costliest)
+
+    # d) Prices in ascending order
+    print("Prices in ascending order:", tuple(sorted(prices)))
+
+    # e) Number of costliest items sold
+    print("Number of costliest items sold:", prices.count(costliest))
+else:
+    print("No items sold")
